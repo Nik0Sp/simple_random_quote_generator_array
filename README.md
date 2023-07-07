@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+<h1 align="center">Simple Quote Random Generator</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<p align="center">
+  <strong>A simple React application that displays random quotes.</strong>
+</p>
 
-In the project directory, you can run:
+##  Getting Started
 
-### `npm start`
+To use this application, follow these steps:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clone the repository: `git clone git@github.com:Nik0Sp/simple_random_quote_generator_array.git`
+2. Change directory to the project folder: `cd simple_quote_generator_array`
+3. Install the dependencies: `npm install`
+4. Start the development server: `npm start`
+5. Open your browser and visit `http://localhost:3000` to see the application in action.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+##  Usage
 
-### `npm test`
+The application consists of two components: `Quote` and `QuoteList`.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- The `Quote` component renders an individual quote with its corresponding author. It receives the quote text and author as props and displays them in the UI.
+- The `QuoteList` component manages the state for the randomly generated quote. It contains a button that, when clicked, generates a random quote from a predefined list of quotes. The generated quote is then passed to the `Quote` component for rendering.
 
-### `npm run build`
+To draw a new random quote, simply click the "Draw a Quote" button.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Components
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The main component of the application is `App`, which serves as the container for the `QuoteList` component.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Quote
 
-### `npm run eject`
+The `Quote` component displays an individual quote with its author. It receives the following props:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- `text`: The text content of the quote.
+- `author`: The author of the quote.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### QuoteList
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The `QuoteList` component manages the state for the randomly generated quote. It contains the following functionality:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- The `generateRandomQuote` function generates a random quote by selecting a quote object from the `quotes` array.
+- The `randomQuote` state variable stores the currently displayed random quote.
+- When the "Draw a Quote" button is clicked, the `generateRandomQuote` function is called, and the randomly generated quote is stored in the `randomQuote` state.
+- The `QuoteList` component renders the `Quote` component with the `randomQuote` as props, displaying the randomly generated quote on the screen.
 
-## Learn More
+## Contributions
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Contributions to this project are welcome. If you have any ideas, improvements, or bug fixes, feel free to open an issue or submit a pull request.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+##  License
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). Feel free to use and modify the code as per the license terms.
